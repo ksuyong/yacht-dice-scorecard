@@ -96,6 +96,9 @@
   font-weight: bold;
   text-align: left;
   padding-left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .score-cell {
@@ -279,6 +282,9 @@
     padding: 2px;
     text-align: left;
     width: 25%;
+    display: flex;
+    align-items: center;
+    gap: 2px;
   }
 
   .score-cell {
@@ -374,6 +380,9 @@
     font-size: 7px;
     padding: 1px;
     width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 1px;
   }
 
   .score-cell {

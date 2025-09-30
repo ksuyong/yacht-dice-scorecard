@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import './YachtScorecard.css';
+import DiceIcon from './DiceIcon';
+import PokerIcon from './PokerIcon';
 
 const YachtScorecard = () => {
   const [players, setPlayers] = useState(['플레이어1', '플레이어2']);
   const [scores, setScores] = useState({});
 
   const categories = [
-    { id: 'ace', name: '에이스', description: '1의 개수만큼' },
-    { id: 'dual', name: '듀얼', description: '2의 개수 × 2' },
-    { id: 'triple', name: '트리플', description: '3의 개수 × 3' },
-    { id: 'four', name: '쿼드', description: '4의 개수 × 4' },
-    { id: 'penta', name: '펜타', description: '5의 개수 × 5' },
-    { id: 'hexa', name: '헥사', description: '6의 개수 × 6' }
+    { id: 'ace', name: '에이스', description: '1의 개수만큼', diceNumber: 1 },
+    { id: 'dual', name: '듀얼', description: '2의 개수 × 2', diceNumber: 2 },
+    { id: 'triple', name: '트리플', description: '3의 개수 × 3', diceNumber: 3 },
+    { id: 'four', name: '쿼드', description: '4의 개수 × 4', diceNumber: 4 },
+    { id: 'penta', name: '펜타', description: '5의 개수 × 5', diceNumber: 5 },
+    { id: 'hexa', name: '헥사', description: '6의 개수 × 6', diceNumber: 6 }
   ];
 
   const bonusCategories = [
@@ -153,7 +155,10 @@ const YachtScorecard = () => {
         <tbody>
           {categories.map(category => (
             <tr key={category.id}>
-              <td className="category-name">{category.name}</td>
+              <td className="category-name">
+                <DiceIcon number={category.diceNumber} size="small" />
+                {category.name}
+              </td>
               {players.map((player, index) => (
                 <td key={index} className="score-cell">
                   <input
@@ -193,6 +198,7 @@ const YachtScorecard = () => {
           {bonusCategories.map(category => (
             <tr key={category.id}>
               <td className="category-name">
+                <PokerIcon type={category.id} size="small" />
                 {category.name}
                 {category.isFixed && <span className="fixed-points"> {category.points}</span>}
               </td>
