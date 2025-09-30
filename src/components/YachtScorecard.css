@@ -222,7 +222,7 @@
   .yacht-scorecard {
     padding: 5px;
     margin: 5px;
-    max-width: 100%;
+    max-width: 100vw;
     overflow-x: auto;
   }
 
@@ -250,70 +250,74 @@
 
   .scorecard-table {
     font-size: 10px;
-    min-width: 100%;
-    display: block;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
     overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .scorecard-table thead,
-  .scorecard-table tbody,
-  .scorecard-table th,
-  .scorecard-table td,
-  .scorecard-table tr {
-    display: table-cell;
+    display: table;
   }
 
   .scorecard-table th,
   .scorecard-table td {
-    padding: 4px 2px;
-    min-width: 50px;
+    padding: 3px 1px;
+    border: 1px solid #333;
+    word-wrap: break-word;
   }
 
   .category-header {
-    width: 120px;
-    min-width: 120px;
+    width: 25%;
+    font-size: 8px;
   }
 
   .player-header {
-    width: 80px;
-    min-width: 80px;
+    width: 18.75%;
+    font-size: 9px;
   }
 
   .category-name {
-    font-size: 9px;
-    padding-left: 4px;
-    width: 120px;
-    min-width: 120px;
+    font-size: 8px;
+    padding: 2px;
+    text-align: left;
+    width: 25%;
+  }
+
+  .score-cell {
+    width: 18.75%;
+    padding: 1px;
   }
 
   .score-input {
     width: 100%;
-    height: 30px;
-    font-size: 12px;
-    min-width: 45px;
+    height: 28px;
+    font-size: 11px;
+    padding: 2px;
+    box-sizing: border-box;
   }
 
   .fixed-score-cell {
-    height: 30px;
-    font-size: 12px;
-    min-width: 45px;
+    height: 28px;
+    font-size: 11px;
+    padding: 2px;
+    box-sizing: border-box;
   }
 
   .player-name-input {
-    width: 70px;
-    font-size: 11px;
-    padding: 2px 4px;
+    width: 100%;
+    font-size: 9px;
+    padding: 1px 2px;
+    box-sizing: border-box;
   }
 
   .fixed-points {
-    font-size: 8px;
+    font-size: 7px;
+    display: block;
   }
 
   .total-cell,
   .grand-total-cell {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
+    padding: 2px;
   }
 }
 
@@ -321,75 +325,88 @@
   .yacht-scorecard {
     padding: 2px;
     margin: 2px;
+    max-width: 100vw;
   }
 
   .yacht-scorecard h1 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .player-controls {
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 6px;
+    margin-bottom: 8px;
   }
 
   .player-btn {
     margin: 2px;
-    padding: 4px 8px;
-    font-size: 11px;
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+
+  .player-count {
+    font-size: 10px;
   }
 
   .scorecard-table {
-    font-size: 9px;
+    font-size: 8px;
+    width: 100%;
+    table-layout: fixed;
   }
 
   .scorecard-table th,
   .scorecard-table td {
     padding: 2px 1px;
-    min-width: 40px;
+    border: 1px solid #333;
   }
 
   .category-header {
-    width: 100px;
-    min-width: 100px;
+    width: 30%;
+    font-size: 7px;
   }
 
   .player-header {
-    width: 60px;
-    min-width: 60px;
+    width: 17.5%;
+    font-size: 8px;
   }
 
   .category-name {
-    font-size: 8px;
-    padding-left: 2px;
-    width: 100px;
-    min-width: 100px;
+    font-size: 7px;
+    padding: 1px;
+    width: 30%;
+  }
+
+  .score-cell {
+    width: 17.5%;
+    padding: 1px;
   }
 
   .score-input {
-    height: 25px;
-    font-size: 11px;
-    min-width: 35px;
+    height: 24px;
+    font-size: 10px;
+    padding: 1px;
   }
 
   .fixed-score-cell {
-    height: 25px;
-    font-size: 11px;
-    min-width: 35px;
+    height: 24px;
+    font-size: 10px;
+    padding: 1px;
   }
 
   .player-name-input {
-    width: 55px;
-    font-size: 10px;
-    padding: 1px 2px;
+    width: 100%;
+    font-size: 8px;
+    padding: 1px;
   }
 
   .fixed-points {
-    font-size: 7px;
+    font-size: 6px;
+    display: block;
   }
 
   .total-cell,
   .grand-total-cell {
-    font-size: 10px;
+    font-size: 9px;
+    padding: 1px;
   }
 }
