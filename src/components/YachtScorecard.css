@@ -1,9 +1,10 @@
 .yacht-scorecard {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
+  overflow-x: auto;
 }
 
 .yacht-scorecard h1 {
@@ -64,11 +65,18 @@
   color: #495057;
 }
 
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
 .scorecard-table {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  table-layout: auto;
+  min-width: 600px;
 }
 
 .scorecard-table th,
@@ -83,7 +91,8 @@
 .category-header {
   background-color: #e0e0e0;
   font-weight: bold;
-  width: 200px;
+  width: 180px;
+  min-width: 150px;
 }
 
 .player-header {
@@ -96,9 +105,14 @@
   background-color: #f0f0f0;
   font-weight: bold;
   text-align: left;
-  padding-left: 12px;
-  height: 50px;
+  padding: 8px;
+  height: auto;
+  min-height: 50px;
   vertical-align: middle;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.2;
 }
 
 .category-name .dice-icon,
@@ -291,11 +305,16 @@
 
   .category-name {
     font-size: 8px;
-    padding: 2px;
+    padding: 4px 2px;
     text-align: left;
     width: 25%;
-    height: 35px;
+    height: auto;
+    min-height: 35px;
     vertical-align: middle;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.1;
   }
 
   .score-cell {
@@ -393,10 +412,15 @@
 
   .category-name {
     font-size: 7px;
-    padding: 1px;
+    padding: 2px 1px;
     width: 30%;
-    height: 30px;
+    height: auto;
+    min-height: 30px;
     vertical-align: middle;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.0;
   }
 
   .score-cell {

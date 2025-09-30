@@ -133,7 +133,8 @@ const YachtScorecard = () => {
         <span className="player-count">현재 플레이어: {players.length}명</span>
       </div>
 
-      <table className="scorecard-table">
+      <div className="table-container">
+        <table className="scorecard-table">
         <thead>
           <tr>
             <th className="category-header"></th>
@@ -241,7 +242,8 @@ const YachtScorecard = () => {
             ))}
           </tr>
         </tbody>
-      </table>
+        </table>
+      </div>
     </div>
   );
 };
