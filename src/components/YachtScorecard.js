@@ -50,7 +50,7 @@ const YachtScorecard = () => {
 
   const handlePlayerNameChange = (index, newName) => {
     const newPlayers = [...players];
-    newPlayers[index] = newName || `플레이어${index + 1}`;
+    newPlayers[index] = newName;
     setPlayers(newPlayers);
   };
 
