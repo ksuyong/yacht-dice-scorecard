@@ -200,7 +200,6 @@ const YachtScorecard = () => {
               <td className="category-name">
                 <PokerIcon type={category.id} size="small" />
                 {category.name}
-                {category.isFixed && <span className="fixed-points"> {category.points}</span>}
               </td>
               {players.map((player, index) => (
                 <td key={index} className="score-cell">
