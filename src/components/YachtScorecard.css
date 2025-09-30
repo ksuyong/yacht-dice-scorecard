@@ -1,10 +1,13 @@
 .yacht-scorecard {
-  max-width: 1200px;
-  margin: 20px auto;
+  width: 100%;
+  max-width: none;
+  margin: 20px;
   padding: 20px;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
-  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .yacht-scorecard h1 {
@@ -68,15 +71,18 @@
 .table-container {
   overflow-x: auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .scorecard-table {
-  width: 100%;
   border-collapse: collapse;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   table-layout: auto;
-  min-width: 600px;
+  width: auto;
+  min-width: fit-content;
 }
 
 .scorecard-table th,
@@ -91,14 +97,15 @@
 .category-header {
   background-color: #e0e0e0;
   font-weight: bold;
-  width: 180px;
-  min-width: 150px;
+  width: 160px;
+  min-width: 140px;
 }
 
 .player-header {
   background-color: #e0e0e0;
   font-weight: bold;
-  width: 120px;
+  width: 100px;
+  min-width: 80px;
 }
 
 .category-name {
@@ -127,6 +134,8 @@
   padding: 4px;
   height: 50px;
   vertical-align: middle;
+  width: 100px;
+  min-width: 80px;
 }
 
 .score-input {
