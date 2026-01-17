@@ -65,23 +65,30 @@ const YachtScorecard = () => {
     const key = `${playerId}-${category}`;
     const currentScore = scores[key];
 
-    if (currentScore === points) {
-      // 이미 선택된 경우 취소
+    if (currentScore === undefined) {
+      // 첫 번째 클릭: 0점
       setScores(prev => ({
         ...prev,
-        [key]: undefined
+        [key]: 0
       }));
-    } else {
-      // 점수 선택
+    } else if (currentScore === 0) {
+      // 두 번째 클릭: 해당 점수 (15, 30, 50)
       setScores(prev => ({
         ...prev,
         [key]: points
+      }));
+    } else {
+      // 세 번째 클릭: 초기화
+      setScores(prev => ({
+        ...prev,
+        [key]: undefined
       }));
     }
   };
 
   const getPlayerScore = (playerId, category) => {
-    return scores[`${playerId}-${category}`] || '';
+    const score = scores[`${playerId}-${category}`];
+    return score !== undefined ? score : '';
   };
 
   const getSubtotal = (playerId) => {
@@ -208,10 +215,12 @@ const YachtScorecard = () => {
                     <div
                       className={`fixed-score-cell ${
                         getPlayerScore(index, category.id) === category.points ? 'selected' : ''
+                      } ${
+                        getPlayerScore(index, category.id) === 0 ? 'zero-score' : ''
                       }`}
                       onClick={() => handleFixedScoreClick(index, category.id, category.points)}
                     >
-                      {getPlayerScore(index, category.id) === category.points ? category.points : ''}
+                      {getPlayerScore(index, category.id) !== '' ? getPlayerScore(index, category.id) : ''}
                     </div>
                   ) : (
                     <input

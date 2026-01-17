@@ -223,6 +223,15 @@
   background-color: #bbdefb;
 }
 
+.fixed-score-cell.zero-score {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.fixed-score-cell.zero-score:hover {
+  background-color: #ffcdd2;
+}
+
 .bonus-earned {
   background-color: #d4edda !important;
   color: #155724 !important;
